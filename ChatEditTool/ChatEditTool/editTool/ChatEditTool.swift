@@ -142,7 +142,8 @@ class ChatEditTool: NSObject {
         var soureMA = NSMutableAttributedString.init(attributedString: sattr)
             
         var attr = NSMutableAttributedString.init(string: text)
-        var range = NSRange.init(location: 0, length: text.count)
+        let reStr = NSString.init(string: text)
+        var range = NSRange.init(location: 0, length: reStr.length)
         attr.addAttribute(NSAttributedString.Key.foregroundColor, value:KHBgColor.init(hex: self.especialColor), range: range)
         
         
@@ -381,7 +382,11 @@ class ChatEditTool: NSObject {
         
         for codeItem in self.decodeItems.reversed() {
             
-            nsSourtStr =  nsSourtStr.replacingCharacters(in: codeItem.range, with: "\u{2064}") as NSString
+            let ra = codeItem.range
+            if (ra.location + ra.length > nsSourtStr.length) || ra.location < 0 {
+                continue
+            }
+            nsSourtStr =  nsSourtStr.replacingCharacters(in: ra, with: "\u{2064}") as NSString
         }
         
         var soureStrs = nsSourtStr.components(separatedBy: "\u{2064}")
