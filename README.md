@@ -35,7 +35,7 @@ textView.edit.insertColorText(showText: "aaa", codeText: "bbb", textColor: "#b85
 ``` swift
 textView.edit.insertIcon(icon: "icon", code: "我是图1")
 ```
-#### 自动检测
+#### 自动检测是否存在链接
 需要在文字改变时调用
 ``` swift
 textView.edit.autoUrl()
