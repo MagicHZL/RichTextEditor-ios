@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -108,6 +109,14 @@
                                     <action selector="get:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yGq-x2-P0C"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XA9-ZE-0jG">
+                                <rect key="frame" x="314" y="85" width="59" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="删除"/>
+                                <connections>
+                                    <action selector="delect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FMu-ad-O12"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -133,7 +142,9 @@
                             <constraint firstItem="c8M-qL-Ket" firstAttribute="top" secondItem="QgU-0W-XhA" secondAttribute="bottom" constant="20" id="hRm-VO-LjC"/>
                             <constraint firstItem="QgU-0W-XhA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hta-o0-AiH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c8M-qL-Ket" secondAttribute="trailing" constant="20" id="jcJ-44-afM"/>
+                            <constraint firstItem="XA9-ZE-0jG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="ndd-DX-474"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PIt-es-mVZ" secondAttribute="trailing" constant="16" id="pDh-AC-Jbn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XA9-ZE-0jG" secondAttribute="trailing" constant="20" id="rSW-zy-evF"/>
                             <constraint firstItem="tNX-Uh-w9f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wfw-MI-eFK"/>
                             <constraint firstItem="PIt-es-mVZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xEb-Es-4oh"/>
                             <constraint firstItem="QgU-0W-XhA" firstAttribute="top" secondItem="wZd-Rp-eQ1" secondAttribute="bottom" constant="20" id="y7y-xd-Hnx"/>

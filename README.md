@@ -13,16 +13,14 @@
 
 **Color**配置为 16进制字符串
 ``` swift
-
-    HZLRichEdit.config.urlColor = "#333333"
-    HZLRichEdit.config.urlCode = { url in
-        return "somthing code"
-    }
-    HZLRichEdit.config.getIconImage = {icon in
-        //TODO:获取图片
-         return .init(named: icon)
-    }
-
+HZLRichEdit.config.urlColor = "#333333"
+HZLRichEdit.config.urlCode = { url in
+    return "somthing code"
+}
+HZLRichEdit.config.getIconImage = {icon in
+    //TODO:获取图片
+    return .init(named: icon)
+}
 ```
 
 ### 基本使用
@@ -35,7 +33,7 @@ textView.edit.insertColorText(showText: "aaa", codeText: "bbb", textColor: "#b85
 ```
 #### 添加icon
 ``` swift
- textView.edit.insertIcon(icon: "icon", code: "我是图1")
+textView.edit.insertIcon(icon: "icon", code: "我是图1")
 ```
 #### 自动检测
 需要在文字改变时调用

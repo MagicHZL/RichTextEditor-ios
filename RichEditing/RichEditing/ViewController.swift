@@ -50,9 +50,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func five(_ sender: Any) {
-        textView.edit.delect(delStr: "")
+        textView.edit.autoUrl()
     }
     
+    @IBAction func delect(_ sender: Any) {
+        
+        if textView.selectRange.location = 0 {
+            return
+        }
+        
+        //模拟获取删除
+        let nsText = NSString(string: textView.text)
+        let delStr = nsText.substring(with:.init(location: textView.selectRange.location - 1, length: 1))
+        textView.edit.delect(delStr: delStr)
+        
+    }
     @IBAction func get(_ sender: Any) {
         codeText.text = textView.edit.getCode()
     }
