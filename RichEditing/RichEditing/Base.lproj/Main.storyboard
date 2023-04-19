@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RichEditing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PIt-es-mVZ">
+                                <rect key="frame" x="16" y="72" width="361" height="146"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="u9i-jr-aFs"/>
+                                </constraints>
+                                <color key="textColor" red="0.20000000000000001" green="0.20392156859999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNX-Uh-w9f">
+                                <rect key="frame" x="20" y="238" width="353" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="CpT-qm-sIr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="#B85AAD 显示 aaa 源码 bbb">
+                                    <color key="baseForegroundColor" red="0.72156862745098038" green="0.3529411764705882" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="one:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ze1-dI-AmF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLX-mu-L9u">
+                                <rect key="frame" x="20" y="293" width="353" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="mMv-uC-i0G"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="#779D86 显示 aaa 源码 ccc">
+                                    <color key="baseForegroundColor" red="0.46666666666666667" green="0.61568627450980395" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="two:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rgr-Xk-q9E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgN-Dw-kGM">
+                                <rect key="frame" x="20" y="348" width="353" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="jft-B3-MoW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="添加图片 源码 我是图1"/>
+                                <connections>
+                                    <action selector="three:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JYn-5R-6m9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKu-dq-Vad">
+                                <rect key="frame" x="20" y="403" width="353" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="t6I-4w-Z5B"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="添加图片 源码 我是图2"/>
+                                <connections>
+                                    <action selector="four:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2yr-DU-OXS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ece-KZ-7Oq">
+                                <rect key="frame" x="20" y="458" width="353" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="y5a-eg-FRR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="自动检测  源码是 我是url"/>
+                                <connections>
+                                    <action selector="five:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3bu-VL-2z0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgU-0W-XhA">
+                                <rect key="frame" x="20" y="553.33333333333337" width="353" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="源码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZd-Rp-eQ1">
+                                <rect key="frame" x="19.999999999999996" y="513" width="34.666666666666657" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8M-qL-Ket">
+                                <rect key="frame" x="20" y="573.33333333333337" width="353" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="8Lp-c1-Ahy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="获取源码"/>
+                                <connections>
+                                    <action selector="get:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yGq-x2-P0C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dLX-mu-L9u" secondAttribute="trailing" constant="20" id="1P3-sr-iph"/>
+                            <constraint firstItem="hKu-dq-Vad" firstAttribute="top" secondItem="mgN-Dw-kGM" secondAttribute="bottom" constant="20" id="54B-Mh-ljF"/>
+                            <constraint firstItem="dLX-mu-L9u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9H4-oT-VW6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QgU-0W-XhA" secondAttribute="trailing" constant="20" id="GSk-F8-PkN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ece-KZ-7Oq" secondAttribute="trailing" constant="20" id="Gy4-qi-TH7"/>
+                            <constraint firstItem="mgN-Dw-kGM" firstAttribute="top" secondItem="dLX-mu-L9u" secondAttribute="bottom" constant="20" id="Kkd-be-gon"/>
+                            <constraint firstItem="wZd-Rp-eQ1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MVE-Ja-BnQ"/>
+                            <constraint firstItem="Ece-KZ-7Oq" firstAttribute="top" secondItem="hKu-dq-Vad" secondAttribute="bottom" constant="20" id="MmT-0V-LI6"/>
+                            <constraint firstItem="dLX-mu-L9u" firstAttribute="top" secondItem="tNX-Uh-w9f" secondAttribute="bottom" constant="20" id="N9A-Br-F25"/>
+                            <constraint firstItem="PIt-es-mVZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="S3K-hR-N9r"/>
+                            <constraint firstItem="wZd-Rp-eQ1" firstAttribute="top" secondItem="Ece-KZ-7Oq" secondAttribute="bottom" constant="20" id="X9n-cV-nNy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tNX-Uh-w9f" secondAttribute="trailing" constant="20" id="aUh-an-HCD"/>
+                            <constraint firstItem="mgN-Dw-kGM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="amg-cD-F4T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wZd-Rp-eQ1" secondAttribute="trailing" symbolic="YES" id="cII-T6-mdc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hKu-dq-Vad" secondAttribute="trailing" constant="20" id="dJ9-SQ-WH7"/>
+                            <constraint firstItem="hKu-dq-Vad" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eJw-Xe-DwT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mgN-Dw-kGM" secondAttribute="trailing" constant="20" id="fSt-7n-9V6"/>
+                            <constraint firstItem="tNX-Uh-w9f" firstAttribute="top" secondItem="PIt-es-mVZ" secondAttribute="bottom" constant="20" id="gfF-Bd-XRg"/>
+                            <constraint firstItem="c8M-qL-Ket" firstAttribute="top" secondItem="QgU-0W-XhA" secondAttribute="bottom" constant="20" id="hRm-VO-LjC"/>
+                            <constraint firstItem="QgU-0W-XhA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hta-o0-AiH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c8M-qL-Ket" secondAttribute="trailing" constant="20" id="jcJ-44-afM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PIt-es-mVZ" secondAttribute="trailing" constant="16" id="pDh-AC-Jbn"/>
+                            <constraint firstItem="tNX-Uh-w9f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wfw-MI-eFK"/>
+                            <constraint firstItem="PIt-es-mVZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xEb-Es-4oh"/>
+                            <constraint firstItem="QgU-0W-XhA" firstAttribute="top" secondItem="wZd-Rp-eQ1" secondAttribute="bottom" constant="20" id="y7y-xd-Hnx"/>
+                            <constraint firstItem="c8M-qL-Ket" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zDN-Jr-rzS"/>
+                            <constraint firstItem="Ece-KZ-7Oq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zxH-DA-AKa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codeText" destination="QgU-0W-XhA" id="ugy-Xd-sKj"/>
+                        <outlet property="textView" destination="PIt-es-mVZ" id="MB1-AE-94q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

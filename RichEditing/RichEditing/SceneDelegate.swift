@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  ChatEditTool
+//  RichEditing
 //
-//  Created by 郝忠良 on 2022/1/20.
+//  Created by 郝忠良 on 2023/4/10.
 //
 
 import UIKit
