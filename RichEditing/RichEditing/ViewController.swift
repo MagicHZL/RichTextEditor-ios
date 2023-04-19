@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        HZLRichEdit.config.urlColor = "#333333"
         HZLRichEdit.config.urlCode = { url in
             return "我是url"
         }
@@ -48,7 +50,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func five(_ sender: Any) {
-        textView.edit.autoUrl()
+        textView.edit.delect(delStr: "")
     }
     
     @IBAction func get(_ sender: Any) {

@@ -56,7 +56,16 @@ struct HZLEdit {
         base.attr = relAttr
         base.selectRange = .init(location: selectRange.location + attr.length, length: 0)
     }
-    
+    /**
+     删除检测
+     delStr 即将被删除的字符
+     */
+    func delect(delStr:String){
+        HZLRichEdit.delectText(delStr: delStr, textEditView: base)
+    }
+    /**
+     获取源码
+     */
     func getCode() -> String {
         let attr = base.attr
         if attr.length == 0 {
