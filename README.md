@@ -1,4 +1,4 @@
-# RichEditing
+# RichEditor
 ## 简介
 一款简单的使你的编辑框支持富文本编辑器的插件
 
