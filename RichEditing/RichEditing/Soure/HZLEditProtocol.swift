@@ -58,6 +58,7 @@ struct HZLEdit {
     /**
      删除检测
      delStr 即将被删除的字符
+     return 是否删除
      */
     func delect(text:String,range:NSRange) -> Bool{
         if text.isEmpty , range.location != 0 {
