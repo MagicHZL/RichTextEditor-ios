@@ -14,11 +14,10 @@ struct HZLRichEdit {
      */
     static var especialColors : Set<String> = []
     static var config : HZLEditConfig = .default
-    static var editView : HZLEditView = UITextView()
     static let CodeMark = "\u{2061}"
     
     static func norAttrKey(attr:NSMutableAttributedString,range:NSRange){
-        attr.addAttribute(NSAttributedString.Key.font, value: editView.editFont, range: range)
+        attr.addAttribute(NSAttributedString.Key.font, value: config.normalFont, range: range)
     }
     
     /*
@@ -29,8 +28,8 @@ struct HZLRichEdit {
         let str = isKong ? CodeMark + " " : CodeMark
         let attr = NSMutableAttributedString.init(string: str)
         let range = NSRange.init(location: 0, length: str.count)
-        attr.addAttribute(NSAttributedString.Key.foregroundColor, value: editView.editColor, range: range)
-        attr.addAttribute(NSAttributedString.Key.font, value: editView.editFont, range: range)
+        attr.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(hex: config.normalColor), range: range)
+        attr.addAttribute(NSAttributedString.Key.font, value: config.normalFont, range: range)
         return attr
     }
     
@@ -98,14 +97,14 @@ struct HZLRichEdit {
         let orAttr = urlToNormal(soureAttr: soureAttr)
         if urls.count > 0 {
             for match in urls {
-                let range = match.range
+                let urlRange = match.range
                 let o = orAttr.attributes(at: range.location, effectiveRange: nil)
                 if let color = o[NSAttributedString.Key.foregroundColor] as? UIColor , especialColors.contains(where: { hex in
                     return color == UIColor.init(hex: hex)
                 }){
                    continue
                 }
-                orAttr.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.init(hex: config.urlColor), range: range)
+                orAttr.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.init(hex: config.urlColor), range: urlRange)
             }
         }
         
@@ -121,7 +120,7 @@ struct HZLRichEdit {
         soureAttr.enumerateAttribute(NSAttributedString.Key.foregroundColor, in: range, options: NSAttributedString.EnumerationOptions.reverse) { (info, range, point) in
             guard let info = info as? UIColor else {return}
             if info == UIColor.init(hex: config.urlColor) {
-                orAttr.addAttribute(NSAttributedString.Key.foregroundColor, value: editView.editColor, range: range)
+                orAttr.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(hex: config.normalColor), range: range)
             }
         }
         return orAttr
@@ -199,14 +198,11 @@ struct HZLRichEdit {
     /**
      是否删除整个彩色块
      */
-    static func delectText(delStr:String,textEditView:HZLEditView) -> Bool {
+    static func delectText(range:NSRange,textEditView:HZLEditView) {
         
-        guard delStr == CodeMark else { return false}
         var textEditView = textEditView
-        textEditView.delete()
-        let selRange = textEditView.selectRange
         let soureAttr = textEditView.attr
-        let selLoction = selRange.location
+        let selLoction = range.location
         let nsStr : NSString = NSString.init(string: soureAttr.string)
         let subStr = nsStr.substring(to: selLoction)
         let nsSubStr : NSString =  NSString.init(string: subStr)
@@ -218,8 +214,6 @@ struct HZLRichEdit {
             textEditView.attr = soureMA
             textEditView.selectRange = NSRange.init(location: loction, length: 0)
         }
-        
-        return true
     }
 
 }

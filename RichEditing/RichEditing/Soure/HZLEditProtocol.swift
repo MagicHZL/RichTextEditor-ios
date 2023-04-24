@@ -11,11 +11,10 @@ import UIKit
  */
 struct HZLEdit {
     
-    var base : HZLEditView
+    private var base : HZLEditView
     
     init(base:HZLEditView) {
         self.base = base
-        HZLRichEdit.editView = base
     }
     /**
      添加彩色文字块
@@ -60,8 +59,17 @@ struct HZLEdit {
      删除检测
      delStr 即将被删除的字符
      */
-    func delect(delStr:String){
-        HZLRichEdit.delectText(delStr: delStr, textEditView: base)
+    func delect(text:String,range:NSRange) -> Bool{
+        if text.isEmpty , range.location != 0 {
+            let content = NSString.init(string: base.attr.string)
+            let str = content.substring(with: range)
+            if str == HZLRichEdit.CodeMark {
+                base.delete()
+                HZLRichEdit.delectText(range: range,textEditView: base)
+                return true
+            }
+        }
+        return false
     }
     /**
      获取源码
@@ -78,8 +86,6 @@ struct HZLEdit {
 protocol HZLEditView {
     var selectRange : NSRange {set get}
     var attr : NSAttributedString {set get}
-    var editColor : UIColor {get}
-    var editFont : UIFont {get}
     var edit : HZLEdit { set get }
     func delete()
 }
@@ -96,18 +102,6 @@ extension HZLEditView {
 }
 
 extension UITextView : HZLEditView {
-    
-    var editColor: UIColor {
-        get{
-            return textColor ?? .black
-        }
-    }
-    
-    var editFont: UIFont {
-        get{
-            return font ?? .systemFont(ofSize: 16)
-        }
-    }
     
     var selectRange: NSRange {
         get {
@@ -133,18 +127,6 @@ extension UITextView : HZLEditView {
 }
 
 extension UITextField : HZLEditView {
-    
-    var editColor: UIColor {
-        get{
-            return textColor ?? .black
-        }
-    }
-    
-    var editFont: UIFont {
-        get{
-            return font ?? .systemFont(ofSize: 16)
-        }
-    }
     
     var selectRange: NSRange {
         get {

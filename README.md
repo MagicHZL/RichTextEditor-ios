@@ -13,7 +13,6 @@
 
 **Color**配置为 16进制字符串
 ``` swift
-HZLRichEdit.config.urlColor = "#333333"
 HZLRichEdit.config.urlCode = { url in
     return "somthing code"
 }
@@ -38,13 +37,13 @@ textView.edit.insertIcon(icon: "icon", code: "我是图1")
 #### 自动检测是否存在链接
 需要在文字改变时调用
 ``` swift
-textView.edit.autoUrl()
+textView.edit.autoUrl() 
 ```
 
 #### 删除
-需要在删除时调用
+需要在删除时调用 
 ``` swift
-textView.edit.delect(delStr: "")
+textView.edit.delect(text: text, range: range)
 ```
 
 #### 获取源码

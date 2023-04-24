@@ -26,6 +26,14 @@ struct HZLEditConfig {
     
     static var `default` = HZLEditConfig()
     /**
+     编辑文字默认颜色
+     */
+    var normalColor : String = "#333333"
+    /**
+     编辑文字默认字体
+     */
+    var normalFont : UIFont = .systemFont(ofSize: 16)
+    /**
      图文混排图片地址
      */
     var getIconImage : (String)->(UIImage?) = {_ in nil }
